@@ -128,7 +128,15 @@ const WeatherBox = ({ children, ...props }) => (
             style={{
               padding: '10px'
             }}
-          >
+          > 
+            {props.weather === 'snow' && (
+              <i
+                class="fe fe-cloud-snow"
+                style={{
+                  fontSize: '60px'
+                }}
+              />
+            )}
             {props.weather === 'rain' && (
               <i
                 class="fe fe-cloud-drizzle"
@@ -147,7 +155,23 @@ const WeatherBox = ({ children, ...props }) => (
             )}
             {props.weather === 'cloud' && (
               <i
-                class="fe fe-cloud-drizzle"
+                class="fe fe-cloud"
+                style={{
+                  fontSize: '60px'
+                }}
+              />
+            )}
+            {props.weather === 'fog' && (
+              <i
+                class="fe fe-align-center"
+                style={{
+                  fontSize: '60px'
+                }}
+              />
+            )}
+            {props.weather === 'wind' && (
+              <i
+                class="fe fe-wind"
                 style={{
                   fontSize: '60px'
                 }}
